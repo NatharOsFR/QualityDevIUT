@@ -7,7 +7,7 @@ namespace QualiteDev
     {
         public class Media
         {
-            // Déclarez les champs comme "protected" pour qu'ils soient accessibles aux classes dérivées.
+           
             protected string Titre;
             protected int NReference;
             protected int nbExemplaire;
@@ -23,7 +23,7 @@ namespace QualiteDev
             {
                 Titre = titre;
                 NReference = nReference;
-                this.nbExemplaire = nbExemplaire; // Utilisez "this" pour faire référence au champ de classe.
+                this.nbExemplaire = nbExemplaire;
             }
 
             public virtual void AfficherInfos()
@@ -42,7 +42,7 @@ namespace QualiteDev
             }
 
             public Livre(string titre, int nReference, int nbExemplaire, string auteur)
-                : base(titre, nReference, nbExemplaire) // Appelez le constructeur de la classe de base avec les paramètres appropriés.
+                : base(titre, nReference, nbExemplaire) 
             {
                 Auteur = auteur;
             }
@@ -64,7 +64,7 @@ namespace QualiteDev
             }
 
             public DVD(string titre, int nReference, int nbExemplaire, int duree)
-                : base(titre, nReference, nbExemplaire) // Appelez le constructeur de la classe de base avec les paramètres appropriés.
+                : base(titre, nReference, nbExemplaire) 
             {
                 Duree = duree;
             }
@@ -86,7 +86,7 @@ namespace QualiteDev
             }
 
             public CD(string titre, int nReference, int nbExemplaire, string artiste)
-                : base(titre, nReference, nbExemplaire) // Appelez le constructeur de la classe de base avec les paramètres appropriés.
+                : base(titre, nReference, nbExemplaire)
             {
                 Artiste = artiste;
             }
@@ -116,7 +116,7 @@ namespace QualiteDev
                 library.RetirerMedia(media);
             }
 
-            // Surcharge de l'opérateur "-" pour retirer un média de la bibliothèque
+           
             public static Library operator -(Library library, Media media)
             {
                 RetirerMediaDeBibliotheque(library, media);
